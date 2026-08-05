@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Sensores IoT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo-area">
+      <h1>Dashboard IoT</h1>
+    </div>
+    <div class="status-conexao online">
+      <span class="ponto-status"></span>
+      <span>Online</span>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-container">
+    
+    <section class="controles">
+      <div class="campo-filtro">
+        <label for="filtroTipo">Filtrar:</label>
+        <select id="filtroTipo">
+          <option value="Todos">Todos os Tipos</option>
+          <option value="Temperatura">Temperatura</option>
+          <option value="Umidade">Umidade</option>
+          <option value="Pressão">Pressão</option>
+        </select>
+      </div>
+
+      <button id="btnAtualizar" class="btn-atualizar">
+        Atualizar os Dados
+      </button>
+    </section>
+
+    <section class="grid-sensores" id="gridSensores">
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 Sistema de Monitoramento Industrial</p>
+    <p>Última atualização: <span id="timestamp">--:--:--</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
